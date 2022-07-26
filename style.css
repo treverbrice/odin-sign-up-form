@@ -1,0 +1,48 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(resources/Norse-Bold.otf);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.leftSide {
+    background: no-repeat left/max(37.5vw, 100vh) url(resources/Miata.jpeg);
+    flex: 3;
+}
+
+.rightSide {
+    background-color: ghostwhite;
+    flex: 5;
+}
+
+.logoDiv {
+    width: 100%;
+    margin-top: 25vh;
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    /* uses rgba to set opacity because the opacity property cascades */
+    background-color: rgba( 0, 0, 0, 0.5);
+}
+
+.logoDiv img {
+    /* fix these clamps */
+    width: 7.5vw;
+    opacity: 100%;
+}
+
+.logoDiv h1 {
+    font-family: norse-bold;
+    color: white;
+    opacity: 100%;
+    font-size: 7.5vw;
+    margin: 0;
+}
