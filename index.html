@@ -15,33 +15,48 @@
                 this in your life to help you realize your deepest dreams. Sign
                 up <em>now</em> to get started.</p>
             <p>You <em>know</em> you want to.</p>
-            <form>
-                <fieldset>
-                    <legend>Let's do this!</legend>
 
-                    <lable for="firstName">FIRST NAME</lable>
-                    <input type="text" id="firstName" name="firstName">
+            <form id="signUp" action="http://httpbin.org/post" method="post">
+                <h3>Let's do this!</h3>
+                
+                <div class="inputRow">
+                    <div class="inputGroup">
+                        <lable for="firstName">FIRST NAME</lable>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div class="inputGroup">
+                        <lable for="lastName">LAST NAME</lable>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                </div>
 
-                    <lable for="lastName">LAST NAME</lable>
-                    <input type="text" id="lastName" name="lastName">
+                <div class="inputRow">
+                    <div class="inputGroup">
+                        <lable for="email">EMAIL</lable>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="inputGroup">
+                        <lable for="phoneNumber">PHONE NUMBER</lable>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="\d{3}-?\d{3}-?\d{4}" title="Please enter a valid phone number with area code">
+                    </div>
+                </div>
 
-                    <lable for="email">EMAIL</lable>
-                    <input type="email" id="email" name="email">
-
-                    <lable for="phoneNumber">PHONE NUMBER</lable>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
-
-                    <lable for="password">PASSWORD</lable>
-                    <input type="password" id="password" name="password">
-
-                    <lable for="confirmPassword">CONFIRM PASSWORD</lable>
-                    <input type="password" id="confirmPassword" name="confirmPassword">
-                </fieldset>
-                <button type="submit" class="createAccount">Create Account</button>
+                <div class="inputRow">
+                    <div class="inputGroup">
+                        <lable for="password">PASSWORD *</lable>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="inputGroup">
+                        <lable for="confirmPassword">CONFIRM PASSWORD *</lable>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                </div>
             </form>
-            <span>
-                Already have an account? <a class="logIn">Log in</a>
-            </span>
+            <button type="submit" form="signUp" class="createAccount">Create Account</button>
+            
+            <div>
+                Already have an account? <a href="#" class="logIn">Log in</a>
+            </div>
         </div>
     </body>
 </html>
